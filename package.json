@@ -1,0 +1,14 @@
+{
+  "name": "campus-resource-booking",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix client",
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run build:watch --prefix client\" \"npm run dev --prefix server\"",
+    "dev:single": "npm run build --prefix client && node server/index.js",
+    "seed": "npm run seed --prefix server",
+    "install-all": "npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
